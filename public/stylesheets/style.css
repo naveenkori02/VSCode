@@ -1,0 +1,179 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Gilroy;
+    font-weight: 300;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+#main{
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+#left{
+  width: 20%;
+  height: 100%;
+  background-color: #252526;
+  color: #fff;
+  padding: 20px;
+}
+
+#left #name{
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+#left hr{
+  width: 95%;
+  opacity: 0.2;
+  margin-bottom: 15px;
+}
+
+#left #foldername{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+#left #foldername h5{
+  text-transform: capitalize;
+}
+
+#left #foldername #icons{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+#left #foldername #icons i{
+  cursor: pointer;
+}
+
+#left form{
+  /* background-color: blue; */
+  padding: 0 1vw;
+}
+
+#left form input{
+  border: none;
+  /* color: red; */
+  font-size: 1.1vw;
+  font-weight: 500;
+  display: none;
+}
+
+#left form input{
+  width: 100%;
+}
+
+#left #files{
+  padding: 20px 0;
+}
+
+#left #files .file{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+#left #files .file .fname{
+  display: flex;
+  gap: 8px;
+}
+
+a{
+  text-decoration: none;
+  font-family: Gilroy;
+  color: #fff;
+}
+
+
+#left #files .file .ficons{
+  display: none;
+  gap: 25px;
+  cursor: pointer;
+}
+
+#left #files .file .ficons .ri-delete-bin-line{
+  color: red;
+}
+
+#left #files .file:hover .ficons{
+  display: flex;
+}
+
+#right{
+  width: 80%;
+  height: 100%;
+  background-color: #1E1E1E;
+}
+
+#right #righttop{
+  width: 100%;
+  height: 55px;
+  background-color: #252526;
+  display: flex;
+  gap: 2px;
+}
+
+#right #righttop .file{
+  width: fit-content;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2D2D2D;
+  color: #fff;
+  padding: 0 1vw;
+}
+
+#rightbottom{
+  width: 100%;
+  height: 93%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#rightbottom form{
+  width: 100%;
+  height: 100%;
+}
+
+#rightbottom textarea{
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-family: Gilroy;
+  font-size: 1.5vw;
+  padding: 2vw;
+  /* font-weight: 400; */
+  background-color: #1E1E1E;
+  color: #fff;
+}
+
+#rightbottom input{
+  position: absolute;
+  top: 10px;
+  right: 5%;
+  background-color: blue;
+  color: #fff;
+  padding: 10px 22px;
+  border: none;
+  border-radius: 10px;
+  
+}
+
+#rightbottom img{
+  height: 30%;
+  filter: grayscale(100%) brightness(20%);
+}

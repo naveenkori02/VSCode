@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VSCode</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="../stylesheets/style.css">
+</head>
+<body>
+  <div id="main">
+    <div id="left">
+      <div id="name">
+        <h4>VSCode - Visual Studio Code</h4>
+      </div>
+      <hr>
+      <div id="foldername">
+        <h5><%= foldername %></h5>
+        <div id="icons">
+          <i id="file-icon" class="ri-file-add-line"></i>
+          <i id="folder-icon" class="ri-folder-add-line"></i>
+          <i class="ri-refresh-line"></i>
+        </div>
+      </div>
+      <form action="/createfile">
+        <input placeholder="Enter file name" type="text" name="filename" id="file-text">
+      </form>
+      <form action="/createfolder">
+        <input placeholder="Enter folder name" type="text" name="foldername" id="folder-text">
+      </form>
+      <div id="files">
+        <% files.forEach(function(val){ %>
+          <div class="file">
+            <div class="fname">
+              <% if(val.isFolder){ %>
+                <i class="ri-arrow-right-s-line"></i>
+              <% }else{ %>
+                <i class="ri-file-code-line"></i>
+              <% } %>
+              <a href="/file/<%= val.name %>"><h5><%= val.name %></h5></a>
+            </div>
+            <div class="ficons">
+              <i class="ri-pencil-line"></i>
+              <a href="/delete/<%= val.name %>/"><i class="ri-delete-bin-line"></i></a>
+            </div>
+          </div>
+        <% }) %>
+      </div>
+    </div>
+    <div id="right">
+      <div id="righttop"></div>
+      <div id="rightbottom">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/2048px-Visual_Studio_Code_1.35_icon.svg.png" alt="">
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function turningOff(){
+      document.querySelector("#file-text").style.display = "none";
+      document.querySelector("#folder-text").style.display = "none";
+    }
+    document.querySelector("#file-icon").addEventListener("click", function(){
+      turningOff();
+      document.querySelector("#file-text").style.display = "block";
+    })
+    document.querySelector("#folder-icon").addEventListener("click", function(){
+      turningOff();
+      document.querySelector("#folder-text").style.display = "block";
+    })
+  </script>
+</body>
+</html>
