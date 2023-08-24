@@ -34,23 +34,23 @@ router.get("/file/:some", function (req, res) {
 })
 
 
-// router.get("/delete/:something/:check", function (req, res) {
-//   if (req.params.check == 0) {
-//     fs.unlink(`./${folderName}/${req.params.something}`, function (err) {
-//       if (err) console.log(err)
-//       else {
-//         res.redirect("/")
-//       }
-//     })
-//   } else {
-//     fs.rm(`./${folderName}/${req.params.something}`, { force: true, recursive: true }, function (err) {
-//       if (err) console.log(err)
-//       else {
-//         res.redirect("/")
-//       }
-//     })
-//   }
-// });
+router.get("/delete/:something/:check", function (req, res) {
+  if (req.params.check == 0) {
+    fs.unlink(`./${folderName}/${req.params.something}`, function (err) {
+      if (err) console.log(err)
+      else {
+        res.redirect("/")
+      }
+    })
+  } else {
+    fs.rm(`./${folderName}/${req.params.something}`, { force: true, recursive: true }, function (err) {
+      if (err) console.log(err)
+      else {
+        res.redirect("/")
+      }
+    })
+  }
+});
 
 
 router.get("/createfile", function (req, res) {
