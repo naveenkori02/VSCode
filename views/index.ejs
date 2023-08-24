@@ -42,7 +42,7 @@
             </div>
             <div class="ficons">
               <i class="ri-pencil-line"></i>
-              <a href="/delete/<%= val.name %>/"><i class="ri-delete-bin-line"></i></a>
+              <a href="/delete/<%= val.name %>/<%= val.isFolder ? 1 : 0 %>"><i class="ri-delete-bin-line"></i></a>
             </div>
           </div>
         <% }) %>
